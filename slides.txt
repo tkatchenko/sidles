@@ -1,0 +1,6 @@
+<h1>SIDLES</h1>
+One slide per line in <code>slides.txt</code>
+<strike>Can't</strike> Can <u>use</u> <em>HTML</em> <strong>elements</strong>
+All code contained in <code>index.html</code>
+Has to be run from a server,<br><code>npm install -g http-server</code>
+Enjoy.
