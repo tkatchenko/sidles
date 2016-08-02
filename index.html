@@ -65,13 +65,13 @@
     <script>
       'use strict';
 
-      const list = document.querySelector('.slides');
+      const slides = document.querySelector('.slides');
 
       fetch(new Request('slides.txt')).then((response) => {
         return response.text().then((text) => {
           text.split('\n').forEach((value, index, array) => {
             if (value) {
-              list.innerHTML += `
+              slides.innerHTML += `
                 <div class="slide-wrapper">
                   <div class="slide">${value}</div>
                 </div>
