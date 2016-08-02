@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i" rel="stylesheet">
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 5vw;
+        color: #FFF;
+        background-color: rgb(34, 34, 34);
+        -webkit-font-smoothing: antialiased;
+        overflow: hidden;
+      }
+
+      h1 {
+        font-size: 10vw;
+      }
+
+      h2 {
+        font-size: 9vw;
+      }
+
+      h3 {
+        font-size: 8vw;
+      }
+
+      h4 {
+        font-size: 7vw;
+      }
+
+      h5 {
+        font-size: 6vw;
+      }
+
+      pre, code {
+        font-family: 'Roboto Mono', monospace;
+        color: #FF5252;
+      }
+
+      .slide-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        text-align: center; 
+      }
+
+      .slide {
+        box-sizing: border-box;
+        padding: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slides"></div>
+
+    <script>
+      'use strict';
+
+      const list = document.querySelector('.slides');
+
+      fetch(new Request('slides.txt')).then((response) => {
+        return response.text().then((text) => {
+          text.split('\n').forEach((value, index, array) => {
+            if (value) {
+              list.innerHTML += `
+                <div class="slide-wrapper">
+                  <div class="slide">${value}</div>
+                </div>
+              `;
+            }
+          });
+        });
+      });
+
+      document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+
+        if (keyName === 'ArrowRight') {
+          window.scrollBy(0, window.innerHeight);
+        } else if (keyName === 'ArrowLeft') {
+          window.scrollBy(0, -window.innerHeight);
+        }
+      }, false);
+    </script>
+  </body>
+</html>
