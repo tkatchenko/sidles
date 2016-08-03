@@ -9,6 +9,8 @@
       * {
         padding: 0;
         margin: 0;
+        -webkit-user-select: none;
+        cursor: pointer;
       }
 
       body {
@@ -97,6 +99,14 @@
         if (keyName === 'ArrowRight') {
           window.scrollBy(0, window.innerHeight);
         } else if (keyName === 'ArrowLeft') {
+          window.scrollBy(0, -window.innerHeight);
+        }
+      }, false);
+
+      document.addEventListener('click', (event) => {
+        if (event.screenX > window.innerHeight / 2) {
+          window.scrollBy(0, window.innerHeight);
+        } else {
           window.scrollBy(0, -window.innerHeight);
         }
       }, false);
