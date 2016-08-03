@@ -1,5 +1,5 @@
 # Sidles
-Minimal presentation solution, suited for rapidly writing many slides.
+Minimal presentation solution, suited for rapidly writing many slides and the Takahashi/Lessig method.
 
 ![Example](https://raw.githubusercontent.com/thank-etc-ok/sidles/master/example.gif)
 
