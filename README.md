@@ -7,6 +7,6 @@ One slide per line in `slides.txt`, slides can use HTML elements.
 
 Left and right arrows control navigation.
 
-Has to be run from a server (npm install -g http-server) and most likely to run in a browser that supports `fetch` (Chrome).
+Has to be run from a server (`npm install -g http-server`) and most likely to run in a browser that supports `fetch` (Chrome).
 
 All code is contained in `index.html`.
