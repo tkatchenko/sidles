@@ -1,7 +1,7 @@
 <h1>SIDLES</h1>
 One slide per line in <code>slides.txt</code>
 <strike>Can't</strike> Can <u>use</u> <em>HTML</em> <strong>elements</strong>
-<img src="http://fakeimg.pl/1980x1080/?text=Scales%20images&font=museo">
+<img src="http://fakeimg.pl/1980x900/?text=Scales%20images&font=museo">
 All code contained in <code>index.html</code>
 Has to be run from a server,<br><code>npm install -g http-server</code>
 Enjoy.
